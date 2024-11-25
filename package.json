@@ -37,7 +37,8 @@
     "java:war:prod": "npm run java:war -- -Pprod",
     "prettier:check": "prettier --check \"{,src/**/,.blueprint/**/}*.{md,json,yml,html,java}\"",
     "prettier:format": "prettier --write \"{,src/**/,.blueprint/**/}*.{md,json,yml,html,java}\"",
-    "services:up": "docker compose -f src/main/docker/services.yml up --wait"
+    "services:up": "docker compose -f src/main/docker/services.yml up --wait",
+    "dev:blockchain:up": "json-server --watch resources/db.json --port 3000"
   },
   "config": {
     "backend_port": 8080,
@@ -49,7 +50,8 @@
     "lint-staged": "15.2.0",
     "prettier": "3.1.0",
     "prettier-plugin-java": "2.5.0",
-    "prettier-plugin-packagejson": "2.4.7"
+    "prettier-plugin-packagejson": "2.4.7",
+    "json-server": "1.0.0-beta.3"
   },
   "engines": {
     "node": ">=18.18.2"
